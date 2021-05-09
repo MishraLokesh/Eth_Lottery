@@ -6,15 +6,16 @@ class App extends Component {
     state = {
       manager: '',
       players: [],
-      balance: '',   //big number js
+      balance: '',   //big number js google it out!
       value: '',
       mmessage: ''
   };
-  
+
   async componentDidMount() {
     const manager = await lottery.methods.manager().call();  //no need to provide from address here, as we are using web3 provider linked to our metamask, so by default it takes the first address as the from address
     const players = await lottery.methods.getPlayers().call();
     const balance = await web3.eth.getBalance(lottery.options.address);
+    // const accounts = await web3.eth.getAccounts();
 
     this.setState({manager, players, balance});
   }
