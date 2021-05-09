@@ -10,7 +10,7 @@ class App extends Component {
       value: '',
       mmessage: ''
   };
-
+  
   async componentDidMount() {
     const manager = await lottery.methods.manager().call();  //no need to provide from address here, as we are using web3 provider linked to our metamask, so by default it takes the first address as the from address
     const players = await lottery.methods.getPlayers().call();
