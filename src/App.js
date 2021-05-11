@@ -51,7 +51,7 @@ render(){
         <p>
           This contract is managed by {this.state.manager} <br></br>
           There are currently {this.state.players.length} people entered, 
-          competing to win {web3.utils.fromWei(this.state.balance, 'ether')} ether!  {this.state.accounts}
+          competing to win {web3.utils.fromWei(this.state.balance, 'ether')} ether! 
         </p>
 
         <hr></hr>
